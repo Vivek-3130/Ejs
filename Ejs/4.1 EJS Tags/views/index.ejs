@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+</head>
+<body>
+    <h1>EJS Tags</h1>
+    <!-- for ouput we will be using = sign -->
+    <p>Current second: <%=seconds%></p>
+    <%if(seconds % 2 === 0){%>
+    <ul>
+        <!-- for the code induction we will be using simple sign -->
+        <% items.forEach((fruits) => { %>
+            <li><%= fruits %></li>
+        <% }); %>
+    </ul>
+    <%} else {%>
+        <p><b>Nothing to be displayed as it is odd time</b></p>
+    <% } %>
+    <!-- for the htmlcontent we have to use - minus sign -->
+    <p><%- htmlcontent %></p>
+
+    <!-- Footer section included -->
+    <%- include("footer.ejs")%>
+
+    
+</body>
+</html>
